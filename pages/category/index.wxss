@@ -1,0 +1,87 @@
+
+.content{
+  position: absolute;
+  width: 100%;
+  top: 100rpx;
+  bottom: 0;
+}
+
+/* 分类 */
+.main{
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+}
+.main-left{
+width: 200rpx;
+background: #f6f6f6;
+height: 100%;
+overflow: scroll;
+position: absolute;
+left:0;
+top: 0;
+}
+.navs-item{
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  border-bottom: 1px solid #eeeeee;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.main-left .active{
+color: red;
+background: #fff;
+position: relative;
+}
+.main-left .active::before{
+ display: block;
+ content:"";
+ width:4px;
+ height: 60rpx;
+ background: red;
+ position: absolute;
+ left: 0;
+ top: 20rpx;
+}
+/* 右侧 */
+.main_right{
+ flex: 1;
+ padding: 20rpx;
+ height: 100%;
+ position: absolute;
+ left: 200rpx;
+ right: 0;
+ overflow: scroll;
+ box-sizing: border-box;
+}
+.main_title{
+text-align: center;
+margin-bottom: 30rpx;
+color: #999999;
+}
+.main_title text{
+  margin: 0 15rpx;
+ 
+}
+.main_footer{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: #999999;
+
+}
+.main_list{
+  width: 33.33%;
+  margin-bottom: 30rpx;
+  display: flex;
+  justify-content: center;
+ flex-direction: column;
+ align-items: center;
+}
+.main_list image{
+  width: 80%;
+  height: 100rpx;
+}

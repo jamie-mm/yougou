@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "seacher":"../../components/seacher/index"
+  },
+  "navigationBarTitleText": "乐优购分类"
+}

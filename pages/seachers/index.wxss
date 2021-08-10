@@ -1,0 +1,66 @@
+.seachers{
+    display: flex;
+    justify-content: space-between;
+    padding: 20rpx;
+    background: #f6f6f6;
+}
+.seachers_input{
+flex: 1;
+display: flex;
+align-items: center;
+height: 60rpx;
+background: #ffffff;
+font-size: 13px;
+border-radius: 8rpx;
+margin-right: 20rpx;
+color: #666666;
+}
+.seachers_input icon{
+    margin-right: 10rpx;
+}
+.quxiao{
+    width: 150rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: center;
+    border: 1px solid #eeeeee;
+    border-radius: 8rpx;
+}
+.seacher_content{
+    display: flex;
+    justify-content: space-between;
+    padding: 20rpx;
+    color: #666666;
+}
+/* .layer{
+    padding: 20rpx;  
+    position: absolute;
+    right: 20rpx;
+    left: 20rpx;
+    top: 80rpx;
+    background: rgba(255, 255, 255, 1);
+}
+.layer navigator{
+    padding: 20rpx;
+    border-bottom: 1px solid #eeeeee;
+    color: #666666;
+    font-size: 14px;
+} */
+/* 历史记录 */
+.history{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 20rpx; 
+    margin-left: -20rpx;
+}
+.history navigator{
+    padding: 0 20rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    text-align: center;
+    border: 1px solid #eeeeee;
+    box-sizing: border-box;
+    background: #eeeeee;
+    margin:20rpx;
+    font-size: 14px;
+}

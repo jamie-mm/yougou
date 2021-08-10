@@ -1,0 +1,39 @@
+<view class="content">
+  <!-- 搜索 -->
+  <seacher/>
+
+  <view class="main">
+    <!-- 左边 -->
+    <view class="main-left" scroll-y>
+      <view class="navs-item {{index===current ? 'active' :''}}" wx:for="{{navs}}" wx:key="index" bindtap="handlemain"
+        data-index="{{index}}">{{item.cat_name}}</view>
+    </view>
+
+    <!-- 右边 -->
+    <view class="main_right">
+      <view class="manin_content" wx:for="{{navs[current].children}}" wx:key="index">
+        <!-- 标题 -->
+        <view class="main_title">
+          <text>/</text>
+          <text>{{item.cat_name}}</text>
+          <text>/</text>
+        </view>
+        <view class="main_footer">
+          <navigator class="main_list" wx:for="{{item.children}}" wx:key="index"
+          url="/pages/goods_list/index?keyword={{item.cat_name}}">
+            <image
+              src="{{item.cat_icon}}"
+              mode="aspectFill"></image>
+            <view>{{item.cat_name}}</view>
+          </navigator>
+        </view>
+
+
+      </view>
+    </view>
+
+
+  </view>
+
+
+</view>

@@ -1,0 +1,23 @@
+/* 搜索 */
+.seacher{
+    background: #ff2d4a;
+    padding: 20rpx;
+    font-size: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 99;
+  }
+  .seacher_input{
+    height: 60rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 4px;
+  }
+  .seacher_input icon{
+    margin-right: 5rpx;
+  }

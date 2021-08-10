@@ -1,0 +1,24 @@
+{
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "pages/map/index",
+                    "pathName": "pages/map/index",
+                    "query": "",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}

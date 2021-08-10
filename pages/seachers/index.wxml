@@ -1,0 +1,33 @@
+<!-- 搜索 -->
+<view class="seachers">
+    <view class="seachers_input">
+        <icon type="search" size="20"></icon>
+        <input placeholder="请输入你想要的商品" value="{{inputvalue}}" 
+        bindinput="handleInput"
+        bindconfirm="bindconfirm">
+        </input>
+    </view>
+    <view class="quxiao" wx:if="{{inputvalue}}" bindtap="handleclear">取消</view>
+</view>
+
+<!-- 搜索关键字 -->
+<!-- <view class="layer" wx:if="{{false}}">
+<navigator url="">电视</navigator>
+<navigator url="">曲面电视</navigator>
+<navigator url="">电视大屏幕</navigator>
+<navigator url="">电视模式与</navigator>
+<navigator url="">小鹏电视</navigator>
+</view> -->
+
+<!-- 历史记录 -->
+<view class="seacher_content">
+    <text>历史搜索</text>
+    <icon type="clear" size="18" bindtap="clearhandle"></icon>
+</view>
+
+<!-- 历史记录列表 -->
+<view class="history">
+    <navigator url="/pages/goods_list/index?keyword={{item}}" 
+    wx:for="{{history}}">{{item}}
+    </navigator>
+</view>

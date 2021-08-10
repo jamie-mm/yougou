@@ -1,0 +1,68 @@
+<view class="da">
+    <!-- 收货人 -->
+    <view wx:if="{{address.userName}}">
+        <view class="address">
+            <text>收件人:　{{address.userName}}</text>
+            <text>{{address.telNumber}}</text>
+        </view>
+        <!-- 收货地址 -->
+        <view class="adderss_info">收货地址:{{address.detailInfo}}</view>
+    </view>
+
+    <view wx:else class="address-jamie" bindtap="handleadderss">点击添加收货地址</view>
+    <!-- 图片 -->
+    <view class="adders_img">
+        <image src="../../images/cart_border@2x.png"></image>
+    </view>
+    <!-- 优购收藏馆 -->
+    <view class="addeess_info">
+        <icon class="iconfont icon-haichuanyougou"></icon>
+        <text>优购生活馆</text>
+    </view>
+
+    <!-- 优购列表 -->
+    <view wx:if="{{!isEmpty}}" style="padding-bottom:100rpx">
+        <view class="goods-lists" wx:for="{{goods}}" wx:key="goods_id">
+            <icon class="goodsicon" type="success" color="{{item.select ? 'red': 'gray'}}" size="16"
+                bindtap="handleselect" data-id="{{item.goods_id}}">
+            </icon>
+            <!-- 右边 -->
+            <view class="goods_right">
+                <image src="{{item.goods_small_logo}}" mode="aspectFill">
+                </image>
+                <view class="goods_top">
+                    <view class="goods_title">{{item.goods_name}}</view>
+                    <view class="goods_price">
+                        <view class="price">￥{{item.goods_price}}</view>
+                        <view class="number">
+                            <text bindtap="handlejian" data-id="{{item.goods_id}}">-</text>
+                            <view class="brt">{{item.number}}</view>
+                            <text bindtap="handleaddnumber" data-id="{{item.goods_id}}">+</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <!-- <view wx:else>购物车为空</view> -->
+
+        </view>
+    </view>
+
+
+
+
+    <!-- 底部 -->
+    <view class="footer_goods">
+        <view class="quxuan" bindtap="handlejuanxuan">
+            <icon class="goodsicon" type="success" color="{{allselect ? 'red':'gray'}}" size="16"></icon>
+            <view>全选</view>
+        </view>
+
+        <view class="heji">
+            <view>合计:<text class="red">￥{{allprice}}</text></view>
+            <view class="yunfe">包含运费</view>
+        </view>
+
+        <view class="jiesuan" bindtap="handlejiesuan">结算</view>
+    </view>
+
+</view>

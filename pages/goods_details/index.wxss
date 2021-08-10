@@ -1,0 +1,84 @@
+/* 轮播图 */
+.swiper{
+    height: 750rpx;
+}
+.swiper-item {
+    width:750rpx;
+    height: 750rpx;
+  }
+  /* 价格 */
+.priceli{
+    padding: 20rpx;
+    color: red;
+    font-size: 18px;
+}
+
+/* 描述 */
+.litext{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20rpx;
+    font-size: 16px;
+    color: #666666;
+}
+.titleli{
+flex: 1;
+overflow:hidden; 
+text-overflow:ellipsis;
+display:-webkit-box; 
+-webkit-box-orient:vertical;
+-webkit-line-clamp:2;
+}
+.shoucang{
+    width: 150rpx;
+    line-height:1.2;
+    border-left: 1px solid #eeeeee;
+    margin-left: 10rpx;
+    text-align: center;
+    font-size: 13px; 
+}
+
+/* 底部 */
+.foter_tab{
+    height: 100rpx;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 99;
+   background: #ffffff;
+   display: flex; 
+}
+.footer_left{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 13px;
+    color: #666666;
+   
+}
+.footer_bottom{
+    width: 30%;
+background: orange;   
+color: #ffffff;
+text-align: center;
+height: 100rpx;
+line-height: 100rpx;
+}
+.footer_bottom:last-child{
+    background: red;
+
+}
+.button[size='mini']{
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 13px;
+    width: 20%;
+    height:100rpx;
+    line-height: 100rpx;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+}

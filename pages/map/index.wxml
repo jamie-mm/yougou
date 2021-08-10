@@ -1,0 +1,10 @@
+<input placeholder="请输入搜索地址" bindinput="handleseacher" class="text"></input>
+<button bindtap="nearby_search" type="primary">搜索周边{{keyword}}</button>
+<map id="map"
+markers="{{markers}}"
+ longitude="113.2759952545166" 
+ latitude="23.117055306224895" 
+ scale="14"
+ show-compass
+ style="width: 100%; height: 350px;">
+</map>

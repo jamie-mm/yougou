@@ -1,0 +1,46 @@
+<!-- 轮播图 -->
+<swiper indicator-dots="{{indicatorDots}}" indicator-color="rgba(255,255,255,0.3)" indicator-active-color="#fff"
+    class="swiper" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{defule.pics}}" wx:key="index">
+        <swiper-item>
+            <image src="{{item.pics_big}}" class="swiper-item" mode="aspectFill"></image>
+        </swiper-item>
+    </block>
+</swiper>
+<!-- 价格 -->
+<view class="priceli">
+    ￥{{defule.goods_price}}
+</view>
+<!-- 描述 -->
+
+<view class="litext">
+    <view class="titleli">{{defule.goods_name}}</view>
+    <view class="shoucang">
+        <icon class="iconfont icon-shoucang"></icon>
+        <view>收藏</view>
+    </view>
+</view>
+<!-- 商品详情 -->
+<rich-text nodes="{{defule.goods_introduce}}"></rich-text>
+
+<!-- 底部 -->
+<view class="foter_tab">
+    <button class="button" open-type="contact" size="mini">
+        联系客服
+    </button>
+    <!-- 左边 -->
+    <view class="footer_left">
+        <icon class="iconfont icon-linedesign-20"></icon>
+        <view>联系客服</view>
+    </view>
+    <navigator class="footer_left" url="/pages/cart/index" open-type="switchTab">
+        <icon class="iconfont icon-gouwuche"></icon>
+        <view>购物车</view>
+    </navigator>
+
+    <!-- 右边 -->
+    <view class="footer_bottom" bindtap="handaddgods">加入购物车</view>
+    <view class="footer_bottom">立即购买 </view>
+
+
+</view>

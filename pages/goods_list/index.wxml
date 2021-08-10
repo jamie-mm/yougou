@@ -1,0 +1,34 @@
+<!-- 搜索 -->
+<view class="seacher">
+    <view class="seacher_input">
+        <icon type="search" size="18"></icon>
+        <text>{{keyword}}</text>
+    </view>
+</view>
+
+<!-- tab栏 -->
+<view class="tab">
+    <view class="tab_list {{current===index ? 'active' :''}}" wx:for="{{['综合','销售','价格']}}" bindtap="handtab"
+        data-index="{{index}}" wx:key="index">
+        {{item}}
+    </view>
+</view>
+
+<view>
+    <navigator class="goods_list" wx:for="{{goods}}" wx:key="index"
+    url="/pages/goods_details/index?id={{item.goods_id}}">
+        <image
+            src="{{item.goods_small_logo}}"
+            mode="aspectFill">
+        </image>
+        <view class="goods_item">
+                <view class="goods_title">{{item.goods_name}}</view>
+                <text class="goods_price">￥{{item.goods_price}}</text>
+            </view>
+    </navigator>
+</view>
+
+<!-- 加载更多 -->
+<view class="load">
+{{mosehad ?'加载更多':'我是有底线的人'}}
+</view>
