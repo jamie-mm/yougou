@@ -9,7 +9,9 @@
         "pages/seachers/index",
         "pages/order_enter/index",
         "pages/auther/index",
-        "pages/map/index"
+        "pages/map/index",
+        "pages/ceshi/index"
+        
        
 
         
